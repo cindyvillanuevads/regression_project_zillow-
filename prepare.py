@@ -6,7 +6,61 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import MinMaxScaler, RobustScaler, StandardScaler()
+from sklearn.preprocessing import MinMaxScaler, RobustScaler, StandardScaler
+
+
+
+def clean_zillow (df):
+    '''
+    Takes in a df and drops duplicates,  nulls,rename columns, parcelid is changed to string.
+    Return a clean df
+    '''
+    
+    # drop duplicates
+    df = df.drop_duplicates()
+    #drop nulls
+    df = df.dropna(how='any',axis=0)
+
+    #  change parcelid to string, it is a uniqure identifier for parcels lots
+    df['parcelid'] = df['parcelid'].astype('str')
+
+    # rename columns
+    df.rename(columns={'bedroomcnt': 'n_bedrooms', 
+                        'bathroomcnt': 'n_bathrooms',
+                        'calculatedfinishedsquarefeet':'sq_ft',
+                        'taxvaluedollarcnt': 'assessed_value_usd'}, inplace=True)
+
+
+    return df
+
+
+def unique_cntvalues (df, max_unique):
+    '''
+    takes in a df and a max_unique values to show using value_counts().
+    returns a report of number of unique values foe each columns and shouw unique values that < max_unique
+    '''
+    #checking the uniques values for each column
+    columns = df.columns.tolist()
+    print( '************************** COUNT OF UNIQUE VALUES ************************** ')
+    print( 'Columns')
+    print(" ")
+    cat_list = []
+    for col in columns:
+        print(f'{col} --> {df[col].nunique()} unique values')
+        if df[col].nunique() < max_unique:
+            cat_list.append(col)
+        print(" ")
+    #checking  the variables that have few values
+    print(" **************************  UNIQUE VALUES **************************")
+    print(" ")
+    print(f"Uniques values of all the columns that have less than {max_unique} unique values ")
+    print(" ")
+    for l in cat_list:
+        print(l)
+        print(df[l].value_counts().sort_index())
+        print("--------------------------- ")
+        print(" ")
+
 
 
 

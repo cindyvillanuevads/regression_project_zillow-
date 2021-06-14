@@ -47,6 +47,8 @@
 
 
 ## PROJECT PLANNIG
+[Trello ] (https://trello.com/b/VhfLmzDz/regressionzillowproject)
+
 
 ### Acquire
 - Acquire data from the Codeup Database using my own function to automate this process. This function is saved in acquire.py file.

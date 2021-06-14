@@ -23,11 +23,12 @@ def clean_zillow (df):
 
     #  change parcelid to string, it is a uniqure identifier for parcels lots
     df['parcelid'] = df['parcelid'].astype('str')
-
+    df['fips'] = df['fips'].astype('int')
     # rename columns
     df.rename(columns={'bedroomcnt': 'n_bedrooms', 
                         'bathroomcnt': 'n_bathrooms',
                         'calculatedfinishedsquarefeet':'sq_ft',
+                        'fips': 'county',
                         'taxvaluedollarcnt': 'assessed_value_usd'}, inplace=True)
 
 
@@ -99,7 +100,7 @@ def distribution_boxplot (df):
 def split_data(df):
     '''
     take in a DataFrame and return train, validate, and test DataFrames.
-    
+    random_state=123
     '''
     train_validate, test = train_test_split(df, test_size=.2, random_state=123)
     train, validate = train_test_split(train_validate, 
@@ -140,7 +141,7 @@ def split_Xy (train, validate, test, target):
 
 def scaled_df ( train_df , validate_df, test_df, scaler):
     '''
-    Take in a 3 df and a type of scaler that you e want use to scale. it will scale all columns
+    Take in a 3 df and a type of scaler that you  want to  use. it will scale all columns
     except object type. Fit a scaler only in train and tramnsform in train, validate and test.
     returns  new dfs with the scaled columns.
     scaler : MinMaxScaler() or RobustScaler(), StandardScaler() 

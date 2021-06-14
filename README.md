@@ -1,11 +1,11 @@
 
 # Zillow Regression Project
 
-#### PROJECT DESCRIPTION
+## PROJECT DESCRIPTION
 - the Zillow Data Science team was asked to predict the values of single unit properties. 
 
 
-#### GOALS 
+## GOALS 
 
 - Predict the values of single unit properties using property data from the Zillow database on the Codeup SQL. The focus will be the properties with a  transaction during the "hot months" of May-August, 2017.
 
@@ -25,14 +25,14 @@
 | county | County associated with property  | int64
 | taxamount | Taxes for property | float 64|
 | tax_rate | Calculation of (taxamount/ home_value)  |  float 64 |
---
+
 
 
 
 | Target | Definition | Data Type |
 | --- | --- | -------|
 | assessed_value_usd | Value of the property | float64 |
---
+
 
 
 
@@ -43,7 +43,7 @@
 | 6037    | Los Angeles County | 
 | 6059    | Orange County | 
 | 6111    | Ventura County  | 
---
+
 
 
 ## PROJECT PLANNIG
@@ -66,7 +66,7 @@ Split dataset into train, validate, test. Separate target from features and scal
 ## AUDIENCE 
 - The Zillow data science team
 
-### INITIAL IDEAS/ HYPOTHESES STATED
+## INITIAL IDEAS/ HYPOTHESES STATED
 - 𝐻𝑜 : There is no difference in  the average of assessed_value_usd  for the properties with  3  bedrooms  vs 2 bedrooms
 - 𝐻𝑎 : There is significant  difference in  the average of assessed_value_usd  for the properties with  3  bedrooms  vs 2 bedrooms
 
@@ -78,7 +78,7 @@ Split dataset into train, validate, test. Separate target from features and scal
 - [ ] Run the final_notebook_project.ipynb notebook
 
 
-### DELIVER:
+## DELIVER:
 - A report in the form of a presentation. (The report/presentation slides should summarize your findings about the drivers of the single unit property values.)
 - A github repository containing my work.
 - README file contains project description and goals, data dictionary, project planning, initial ideas/hypotheses, instructions to recreate project.

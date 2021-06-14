@@ -74,8 +74,8 @@ Split dataset into train, validate, test. Separate target from features and scal
 
 - [x] Read this README.md
 - [ ] Create a env.py file that has (user, host, password) in order to  get the database 
-- [ ] Download the aquire.py, prepare.py, model_func.py, explore.py and  final_notebook_project.ipynb into your working directory
-- [ ] Run the final_notebook_project.ipynb notebook
+- [ ] Download the aquire.py, prepare.py, explore.py , model.py,  evaluate.pyand  and  zillow.ipynb into your working directory
+- [ ] Run the zillow.ipynb notebook
 
 
 ## DELIVER:

@@ -47,7 +47,7 @@
 
 
 ## PROJECT PLANNIG
-[Trello ] (https://trello.com/b/VhfLmzDz/regressionzillowproject)
+[Trello ](https://trello.com/b/VhfLmzDz/regressionzillowproject)
 
 
 ### Acquire

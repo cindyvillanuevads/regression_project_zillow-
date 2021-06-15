@@ -10,7 +10,7 @@
 - Predict the values of single unit properties using property data from the Zillow database on the Codeup SQL. The focus will be the properties with a  transaction during the "hot months" of May-August, 2017.
 
 - Plot the distribution of tax rates for each county. (his is separate from the creation of model )
--   Create a presentation of findings
+-   Create a presentation of findings. See [presentation](https://www.canva.com/design/DAEhYOszNZM/t8Cq84OPlBoZuwg_Zq54zA/view?utm_content=DAEhYOszNZM&utm_campaign=designshare&utm_medium=link&utm_source=publishpresent)
 
 
 
@@ -47,7 +47,7 @@
 
 
 ## PROJECT PLANNIG
-[Trello ](https://trello.com/b/VhfLmzDz/regressionzillowproject)
+I used [Trello ](https://trello.com/b/VhfLmzDz/regressionzillowproject)
 
 
 ### Acquire
